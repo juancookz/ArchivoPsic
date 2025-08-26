@@ -9,7 +9,7 @@ public class SeccionRepository
     public List<Seccion> GetAll()
     {
         List<Seccion> Secciones = new List<Seccion>();
-        string query = @"SELECT * FROM secciones;";
+        string query = @"SELECT id,nombre,descripcion,ruta_portada FROM secciones;"; // Update query
         using (var connection = new SqliteConnection(_stringConnection))
         {
             connection.Open();
@@ -22,7 +22,8 @@ public class SeccionRepository
                     {
                         Id = reader.GetInt32(0),
                         Nombre = reader.GetString(1),
-                        Descripcion = reader.GetString(2)
+                        Descripcion = reader.GetString(2),
+                        ImagenPath = reader.GetString(3)
                     });
                 }
             }
