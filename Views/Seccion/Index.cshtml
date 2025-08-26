@@ -12,13 +12,15 @@
     @foreach (var seccion in Model)
     {
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch mb-4">
-            <div class="card w-100">
-                <img src="@Url.Content("~/images/secciones/" + seccion.ImagenPath)" class="card-img-top" alt="@seccion.Nombre">
-                <div class="card-body">
-                    <h5 class="card-title">@seccion.Nombre</h5>
-                    <p class="card-text">@seccion.Descripcion</p>
+            <a asp-controller="Seccion" asp-action="ListArchivos" asp-route-id="@seccion.Id" class="w-100 text-decoration-none text-dark">
+                <div class="card w-100 h-100">
+                    <img src="@Url.Content("~/images/secciones/" + seccion.ImagenPath)" class="card-img-top" alt="@seccion.Nombre">
+                    <div class="card-body">
+                        <h5 class="card-title">@seccion.Nombre</h5>
+                        <p class="card-text">@seccion.Descripcion</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     }
 </div>
