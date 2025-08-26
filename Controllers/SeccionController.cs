@@ -13,4 +13,8 @@ public class SeccionController : Controller
         List<Seccion> Secciones = SeccionRepository.GetAll();
         return View(Secciones);
     }
+        public IActionResult Index()
+    {
+        return View();
+    }
 }
