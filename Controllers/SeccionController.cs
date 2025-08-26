@@ -15,6 +15,7 @@ public class SeccionController : Controller
     }
         public IActionResult Index()
     {
-        return View();
+            List<Seccion> Secciones = SeccionRepository.GetAll();
+            return View(Secciones);
     }
 }
