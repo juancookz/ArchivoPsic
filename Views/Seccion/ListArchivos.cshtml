@@ -15,7 +15,7 @@ else
     @foreach (var archivo in Model)
     {
         <li>
-            <a href="@Url.Content("~/archivos/" + archivo.RutaArchivo)" target="_blank">@archivo.Titulo</a>
+            <a href="@Url.Content("~/files/uploads/" + archivo.RutaArchivo)" target="_blank">@archivo.Titulo</a>
         </li>
     }
     </ul>
