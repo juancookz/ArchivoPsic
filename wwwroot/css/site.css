@@ -20,4 +20,69 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #611030;
+  color: white;
+}
+
+/* Make all text elements white */
+body, h1, h2, h3, h4, h5, h6, p, span, div, a, label, input, textarea, select, option, li, td, th {
+  color: white !important;
+}
+
+/* Ensure links are visible and styled appropriately */
+a {
+  color: #ffffff !important;
+}
+
+a:hover {
+  color: #cccccc !important;
+}
+
+/* Style form elements for better visibility */
+input, textarea, select {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Style table elements */
+table {
+  color: white !important;
+}
+
+td, th {
+  color: white !important;
+}
+
+/* Override Bootstrap navbar text color */
+.navbar-brand, .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Footer text */
+.footer {
+  color: white !important;
+}
+
+.footer a {
+  color: #ffffff !important;
+}
+
+/* Card text styling - keep cards with black text */
+.card, .card-body, .card-title, .card-text {
+  color: black !important;
+}
+
+.card a {
+  color: black !important;
+}
+
+.card a:hover {
+  color: #333333 !important;
+}
+.navbar {
+  background-color: #2d0716 !important;
 }
